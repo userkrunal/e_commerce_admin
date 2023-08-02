@@ -66,15 +66,15 @@ class FirebaseHelper{
     firestore.collection("Product").doc("${id}").delete();
   }
 
-  // void updateData(ProductModel model) {
-  //   firestore.collection("Product").doc(model.id).set({
-  //     "name": model.name,
-  //     "description": model.description,
-  //     "category": model.category,
-  //     "price": model.price,
-  //     "image": model.img
-  //   });
-  // }
+  void updateData(ProductModel model) {
+    firestore.collection("Product").doc(model.id).set({
+      "name": model.name,
+      "description": model.description,
+      "category": model.category,
+      "price": model.price,
+      "image": model.img
+    });
+  }
 
 
 

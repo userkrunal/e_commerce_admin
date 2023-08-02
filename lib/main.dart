@@ -1,6 +1,7 @@
 import 'package:e_commerce_admin/e_commerce/view/signin_view/add_product.dart';
 import 'package:e_commerce_admin/e_commerce/view/signin_view/home_screen.dart';
 import 'package:e_commerce_admin/e_commerce/view/signin_view/signin_screen.dart';
+import 'package:e_commerce_admin/e_commerce/view/signin_view/updet_screen.dart';
 import 'package:e_commerce_admin/e_commerce/view/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -38,6 +39,7 @@ Future<void> main() async {
           '/signup':(context) =>SignUpScreen(),
           '/home':(context) =>HomeScreen(),
           '/add':(context) =>AddProduct(),
+          '/update':(context) =>UpdateProduct(),
         },
       );
     },)

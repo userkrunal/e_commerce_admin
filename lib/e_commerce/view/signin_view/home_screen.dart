@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               SliverGridDelegateWithFixedCrossAxisCount(
                                   crossAxisCount: 2,
                                   crossAxisSpacing: 10,
-                                  mainAxisExtent: 222),
+                                  mainAxisExtent: 228),
                           itemBuilder: (context, index) {
                             return Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -83,8 +83,21 @@ class _HomeScreenState extends State<HomeScreen> {
                                     borderRadius: BorderRadius.circular(50),
                                     color: Color(0xffEDEDED)),
                                 child: Column(
+
                                   children: [
-                                     SizedBox(height: 20),
+                                    Row(
+                                  mainAxisAlignment:MainAxisAlignment.spaceAround,
+                                 // mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                        IconButton(onPressed:  () {
+                                          FirebaseHelper.helper.deleteData("${productList[index].id}");
+                                        }, icon: Icon(Icons.delete)),
+                                        IconButton(onPressed:  () {
+                                          Get.toNamed('/update',arguments: productList[index]);
+                                        }, icon: Icon(Icons.edit)),
+                                      ],
+                                    ),
+
                                     Container(
                                       height: 110,
                                       width: 110,
