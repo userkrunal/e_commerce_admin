@@ -11,19 +11,6 @@ import 'package:sizer/sizer.dart';
 import 'e_commerce/view/signin_view/signup_screen.dart';
 import 'firebase_options.dart';
 
-// Future<void> main()
-// async {
-//
-//   runApp(
-//     GetMaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       routes: {
-//         '/':(p0) =>SplashScreen(),
-//       },
-//     )
-//  );
-//}
-
 Future<void> main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
